@@ -5,17 +5,16 @@ import HomeScreen from "./HomeScreen";
 
 const Tab = createBottomTabNavigator();
 
-const Tabs = () => {
+const MyTabs = () => {
   return (
     <Tab.Navigator
-      screenOptions={() => ({
-        headerShown: false,
-      })}
+      initialRouteName="HomeScreen"
+      screenOptions={{ headerShown: false }}
     >
-      <Tab.Screen name="HomeScreen" component={HomeScreen} />
+      {/* <Tab.Screen name="HomeScreen" component={HomeScreen} /> */}
       <Tab.Screen name="Favoris" component={Favoris} />
     </Tab.Navigator>
   );
 };
 
-export default Tabs;
+export default MyTabs;
